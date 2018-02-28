@@ -55,9 +55,12 @@ ENV NODE_UNREGISTER_IF_STILL_DOWN_AFTER 60000
 # As integer, maps to "downPollingLimit"
 ENV NODE_DOWN_POLLING_LIMIT 2
 # As string, maps to "applicationName"
-ENV NODE_APPLICATION_NAME ""
+ENV NODE_APPLICATION_NAME "Vinerere"
 
+ENV INSTANCE_ID $INSTANCEID
 # Following line fixes https://github.com/SeleniumHQ/docker-selenium/issues/87
 ENV DBUS_SESSION_BUS_ADDRESS=/dev/null
+
+RUN echo "Node.js version found: $NODE_VERSION"
 
 CMD ["/opt/bin/entry_point.sh"]
