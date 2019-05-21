@@ -31,7 +31,7 @@ USER seluser
 #==================
 # Chrome webdriver
 #==================
-ARG CHROME_DRIVER_VERSION="75.0.3770.8"
+ARG CHROME_DRIVER_VERSION="74.0.3729.6"
 RUN wget --no-verbose -O /tmp/chromedriver_linux64.zip https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip \
   && rm -rf /opt/selenium/chromedriver \
   && unzip /tmp/chromedriver_linux64.zip -d /opt/selenium \
